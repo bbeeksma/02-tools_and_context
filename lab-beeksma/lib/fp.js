@@ -13,6 +13,11 @@ exports.nReduce = (array, magic) => {
   return Array.prototype.reduce.call(array, magic);
 };
 
-exports.nConcat = (array, magic) => {
-  return Array.prototype.concat.call(array, magic);
+exports.nConcat = (array, array2) => {
+  return Array.prototype.concat.call(array, array2);
+};
+
+exports.nSplice = (array, ...args) => {
+  console.log(args);
+  return Array.prototype.splice.apply(array,args);
 };

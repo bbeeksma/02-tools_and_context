@@ -9,6 +9,9 @@ const mapResults = [2,4,6,8,10,12];
 const filterResults = [2,4,6];
 const reduceResults = 21;
 const concatResults = [1,2,3,4,5,6,7,8,9,10,11,12];
+const spliceDeleted = [3,4];
+const spliceDone = [1,2,'z','y',5,6,7,8,9,0];
+
 
 describe('Functions with Call', function(){
   describe('#nMap', function(){
@@ -41,6 +44,16 @@ describe('Functions with Call', function(){
       console.log(result);
       expect(result).to.be.an('array');
       expect(result).to.be.deep.equal(concatResults);
+    });
+  });
+  describe('#nSplice', function(){
+    it('should return new array',function(){
+      let spliceArray  = [1,2,3,4,5,6,7,8,9,0];
+      let deleted = arr.nSplice(spliceArray,2,2,'z','y');
+      expect(deleted).to.be.an('array');
+      expect(deleted).to.be.deep.equal(spliceDeleted);
+      expect(spliceArray).to.be.an('array');
+      expect(spliceArray).to.be.deep.equal(spliceDone);
     });
   });
 });

@@ -8,3 +8,7 @@ exports.nMap = (array, operator) => {
 exports.nFilter = (array, selector) => {
   return Array.prototype.filter.call(array, selector);
 };
+
+exports.nReduce = (array, magic) => {
+  return Array.prototype.reduce.call(array, magic);
+};
